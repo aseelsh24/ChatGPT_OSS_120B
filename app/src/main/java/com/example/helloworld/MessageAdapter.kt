@@ -6,7 +6,14 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class MessageAdapter(private val messages: List<Message>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class MessageAdapter(private var messages: MutableList<Message>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+
+    fun submitList(newMessages: List<Message>) {
+        messages.clear()
+        messages.addAll(newMessages)
+        // A more efficient way would be to use DiffUtil, but for this simple case, this is fine.
+        notifyDataSetChanged()
+    }
 
     private const val VIEW_TYPE_USER = 1
     private const val VIEW_TYPE_ASSISTANT = 2
