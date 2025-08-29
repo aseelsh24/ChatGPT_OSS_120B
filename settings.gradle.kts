@@ -10,9 +10,8 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        maven { url = uri("https.jitpack.io") }
     }
 }
 
-rootProject.name = "GPT-OSS Chatbot"
+rootProject.name = "Hello World"
 include(":app")

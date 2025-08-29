@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.gptosschatbot"
+    namespace = "com.example.helloworld"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.gptosschatbot"
+        applicationId = "com.example.helloworld"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -34,7 +34,7 @@ android {
         jvmTarget = "1.8"
     }
     buildFeatures {
-        viewBinding = true
+        // viewBinding is not needed for this simple app.
     }
 }
 
@@ -44,17 +44,7 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.11.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
-
-    // ViewModel and Coroutines
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
-
-    // Gradio Client
-    implementation("com.github.gradio-app:gradio-client-java:1.0.3")
-
-    // Markdown Renderer
-    implementation("io.noties.markwon:core:4.6.2")
+    implementation("androidx.recyclerview:recyclerview:1.3.2")
 
     // Testing
     testImplementation("junit:junit:4.13.2")
