@@ -16,3 +16,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "GPT-OSS Chatbot"
 include(":app")
+include(":gradio-client")

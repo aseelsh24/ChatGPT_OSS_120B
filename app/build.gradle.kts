@@ -51,7 +51,7 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
 
     // Gradio Client
-    implementation("com.github.gradio-app:gradio-client-java:1.0.3")
+    implementation(project(":gradio-client"))
 
     // Markdown Renderer
     implementation("io.noties.markwon:core:4.6.2")
