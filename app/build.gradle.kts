@@ -16,9 +16,10 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
-        // This creates a field in the generated BuildConfig class.
-        // It's recommended to move this to local.properties for production.
-        buildConfigField("String", "HF_API_KEY", "\"\"") // Default empty key
+        // Read API key from gradle.properties or command line -P argument
+        // Example: ./gradlew build -PHF_API_KEY="your-key"
+        val hfApiKey = project.findProperty("HF_API_KEY") as? String ?: ""
+        buildConfigField("String", "HF_API_KEY", "\"$hfApiKey\"")
     }
 
     buildTypes {
